@@ -1,3 +1,4 @@
 #!/bin/bash
 env
-docker build --build-arg REPOSITORY=$REPOSITORY -t $IMAGE_NAME .
+ls -F
+docker build --build-arg REPOSITORY=${REPOSITORY:-} --build-arg TAG=${TAG:-} --build-arg REGISTRY=${REGISTRY:-} -t $IMAGE_NAME -f $DOCKERFILE_PATH .
