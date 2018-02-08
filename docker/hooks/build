@@ -1,0 +1,1 @@
+docker build --build-arg REPOSITORY=$REPOSITORY -t $IMAGE_NAME .
