@@ -3,4 +3,4 @@ env
 
 echo docker build --build-arg REPOSITORY=${REPOSITORY:-} --build-arg TAG=${TAG:-} --build-arg REGISTRY=${REGISTRY:-} -t $IMAGE_NAME -f $DOCKERFILE_PATH /src/bmknbdbhkyvjghw8ejovbdf$BUILD_PATH
 
-docker build --build-arg REPOSITORY=${REPOSITORY:-} --build-arg TAG=${TAG:-} --build-arg REGISTRY=${REGISTRY:-} -t $IMAGE_NAME -f $DOCKERFILE_PATH /src/bmknbdbhkyvjghw8ejovbdf$BUILD_PATH
+docker build --build-arg REPOSITORY=${REPOSITORY:-} --build-arg TAG=${TAG:-} --build-arg REGISTRY=${REGISTRY:-} -t $IMAGE_NAME -f $DOCKERFILE_PATH /src/${BUILD_CODE}${BUILD_PATH}
