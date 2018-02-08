@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "=> Building the binary"
+env
+docker build -f docker/Dockerfile.cli $(pwd)
