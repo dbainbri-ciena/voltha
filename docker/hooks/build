@@ -1,8 +1,13 @@
 #!/bin/bash
-env
+
+if [ "$DEBUG" == "true" ]; then
+  env | sort
+fi
 
 cd /src/${BUILD_CODE}${BUILD_PATH}
-pwd
-echo docker build --build-arg REPOSITORY=$REPOSITORY --build-arg REGISTRY=$REGISTRY --build-arg TAG=${TAG:-latest} -t $IMAGE_NAME -f $DOCKERFILE_PATH .
+
+if [ "$DEBUG" == "true" ]; then
+  echo docker build --build-arg REPOSITORY=$REPOSITORY --build-arg REGISTRY=$REGISTRY --build-arg TAG=${TAG:-latest} -t $IMAGE_NAME -f $DOCKERFILE_PATH .
+fi
 
 docker build --build-arg REPOSITORY=$REPOSITORY --build-arg REGISTRY=$REGISTRY --build-arg TAG=${TAG:-latest} -t $IMAGE_NAME -f $DOCKERFILE_PATH .
