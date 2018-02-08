@@ -1,4 +1,1 @@
-#!/bin/bash
-echo "=> Building the binary"
-env
-docker build -f docker/Dockerfile.cli $(pwd)
+docker build --build-arg REPOSITORY=$REPOSITORY -t $IMAGE_NAME .
