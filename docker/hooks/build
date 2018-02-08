@@ -5,4 +5,4 @@ cd /src/${BUILD_CODE}${BUILD_PATH}
 pwd
 echo docker build --build-arg REPOSITORY=voltha/ -t $IMAGE_NAME -f $DOCKERFILE_PATH .
 
-docker build --build-arg REPOSITORY=$REPOSITORY --build-arg REGISTRY=$REGISTRY --build-arg TAG=$TAG -t $IMAGE_NAME -f $DOCKERFILE_PATH .
+docker build --build-arg REPOSITORY=$REPOSITORY -t $IMAGE_NAME -f $DOCKERFILE_PATH .
